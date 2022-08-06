@@ -8,6 +8,7 @@
 #pragma once
 
 #include "sdkconfig.h"
+#include "pgmspace_esp32.h"
 
 #include <cstdint>
 #include <cmath>
@@ -18,12 +19,12 @@
 #define __AVR_ATtiny85__
 
 // not needed any more
-#define PGM_P  const char*
-#define PROGMEM
+// #define PGM_P  const char*
+// #define PROGMEM
 
 // used in HtmlColor.h
-#define strncpy_P   std::strncpy
-#define strlen_P    std::strlen
+// #define strncpy_P   std::strncpy
+// #define strlen_P    std::strlen
 
 // used in NeoEase.h
 #define HALF_PI  M_PI_2
@@ -37,13 +38,13 @@ typedef std::string  String;
 extern "C" {
 #endif // __cplusplus
 
-inline uint8_t pgm_read_byte(const void* p) {
-    return *(const uint8_t*)(p);
-}
+// inline uint8_t pgm_read_byte(const void* p) {
+//     return *(const uint8_t*)(p);
+// }
 
-inline uint16_t pgm_read_dword(const void* p) {
-    return *(const uint16_t*)(p);
-}
+// inline uint16_t pgm_read_dword(const void* p) {
+//     return *(const uint16_t*)(p);
+// }
 
 inline unsigned long micros() {
     struct timeval tv;
